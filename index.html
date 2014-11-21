@@ -1,44 +1,26 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>CIVICS.com by DazzaGreenwood</title>
+{% extends "base.html" %}
+{% block content %}
+<section id="wrapper">
+  <header id="header">
+    <h1>{% block title %}{{ block.super }}{% endblock title %}</h1>
+  </header> <!--header-->
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>CIVICS.com</h1>
-        <p>The New CIVICS.com</p>
+  <a id="documentation" href="http://cactusformac.com/redirect/#documentation">Documentation</a>
 
-        <p class="view"><a href="https://github.com/DazzaGreenwood/CIVICS">View the Project on GitHub <small>DazzaGreenwood/CIVICS</small></a></p>
+  <section id="thumbnails" class="group">
+    {% for post in posts %}
+    <a href='/{{ post.path }}'><img class="2x" width="300" height="300" src="{{ post.thumbnail }}"/>
+    <span>{{ post.title }}</span>
+    </a>
+    {% endfor %}
+  </section> <!--thumbnails-->
+  
+  {% block footer %}
+  <footer id="footer">
+    <p class="small">A short description.</p>
+  </footer>
+  {% endblock footer %}
+</section> <!--wrapper-->
 
-
-        <ul>
-          <li><a href="https://github.com/DazzaGreenwood/CIVICS/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/DazzaGreenwood/CIVICS/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/DazzaGreenwood/CIVICS">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h2>
-<a id="welcome-to-the-new-civicscom-github-pages" class="anchor" href="#welcome-to-the-new-civicscom-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the New CIVICS.com GitHub Pages!</h2>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/DazzaGreenwood">DazzaGreenwood</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+<a href="http://cactusformac.com/?utm_source=templates&utm_medium=badge&utm_campaign=portfolio-template"><img id="badge" class="2x" src="{% static '/images/badge.png' %}"/></a>
+{% endblock content %}

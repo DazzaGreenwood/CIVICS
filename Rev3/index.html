@@ -1,77 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title> CIVICS.com Consultancy Services </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-
-    <link rel='stylesheet' href='stylesheets/style.css'>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic|Inconsolata">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
-    
-    
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
-  </head>
-  <body>
-    <header class="l-header">
-      <div class="l-constrained flag">
-        <div class="table-cell">
-          <a class="menu-link btn btn--small" href="#">Menu</a>
-        </div>
-        
-        <div class="table-cell text-right">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-count="none">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        </div>
-      </div>
-    </header>
-    
-    <div class="drawer">
-      <nav>
-        <ul class="nav nav--primary">
-          <li><a href="#Design">Design</a></li>
-          <li><a href="#Define">Define</a></li>
-          <li><a href="#Demo">Demo</a></li>
-          <li><a href="#Deliberate">Deliberate</a></li>
-          <li><a href="#Decide">Decide</a></li>
-          <li><a href="#Deploy">Deploy</a></li>
-        </ul>
-      </nav>
-      
-      <div class="l-constrained">
-        <div class="hero">
-          <div class="tagline h-grp">
-            <h1 class="giga">DesignDeploy</h1>
-            <p class="lead">Integrated Continuous Deployment</p>
-          </div>
-          
-          <ul class="l-inline cta">
-            <li><a class="btn" href="https://github.com/DazzaGreenwood/CIVICS/tree/master">View on Github</a></li>
-            <li><a class="btn" href="https://github.com/DazzaGreenwood/CIVICS/issues/new">Connect</a></li>
-          </ul>
-        </div>
+<!-- @include _head -->
+<!-- @include _header -->
 
         <section class="l-row" id="Design">
           <header class="section-header">
@@ -177,7 +105,7 @@
             <p>Wrap ever clearer and more broadly agreed  <code>descriptions</code> around <code>that which is being designed</code>.</p>
             
             <figure>
-              <img src='http://placehold.it/900x400' width='900' height='400' alt='Placeholder Image' />
+              <!-- @placeholder 900x400 -->
               
               <figcaption>
                 <p>This is a supporting caption.</p>
@@ -424,7 +352,7 @@
           
             <div class="media section section--sub">
               <div class="pull-left pull-left-desktop">
-                <img src='http://placehold.it/256x190' width='256' height='190' alt='Placeholder Image' />
+                <!-- @placeholder 256x190 -->
               </div>
               
               <div class="media-body">
@@ -434,7 +362,7 @@
             
             <div class="media section section--sub">
               <div class="pull-right pull-right-desktop">
-                <img src='http://placehold.it/256x190' width='256' height='190' alt='Placeholder Image' />
+                <!-- @placeholder 256x190 -->
               </div>
               
               <div class="media-body">
@@ -450,7 +378,7 @@
             
             <div class="flag section section--sub">
               <div class="table-cell table-cell--left">
-                <img src='http://placehold.it/128x128' width='128' height='128' alt='Placeholder Image' />
+                <!-- @placeholder 128x128 -->
               </div>
               
               <div class="table-cell">
@@ -464,7 +392,7 @@
               </div>
               
               <div class="table-cell table-cell--right">
-                <img src='http://placehold.it/128x128' width='128' height='128' alt='Placeholder Image' />
+                <!-- @placeholder 128x128 -->
               </div>
             </div>
           </section>
@@ -495,41 +423,4 @@
           </section>
         </section>
     
-
-        <footer class="l-footer">
-          <ul class="nav">
-            <li><a href="https://github.com/kachunchau/barebones-hammer">View on Github</a></li>
-            <li><a href="https://github.com/kachunchau/barebones-hammer/raw/master/barebones.hammer">Get Hammer Template</a></li>
-          </ul>
-        </footer>
-      </div>
-    </div>
-    
-    <div class="overlay" id="overlay">
-      <div class="table-cell">
-        <div class="modal">
-          <header class="modal-header">
-            <h3 class="modal-title">About</h3>
-          </header>
-          
-          <div class="modal-body">
-            <p>Footer Content Placeholder</p>
-            
-            <p>Creative Commons License Placeholder</p>
-            
-
-          </div>
-          
-          <footer class="modal-footer">
-            <a class="btn btn--small modal-close" href="#none">Close</a>
-          </footer>
-        </div>
-      </div>
-    </div>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
-    <script>window.Zepto || document.write('<script src="javascript/vendor/zepto.min.js"><\/script>')</script>
-    <script src="javascript/plugins.js"></script>
-    <script src="javascript/main.js"></script>
-  </body>
-</html>
+<!-- @include _footer -->

@@ -1,0 +1,52 @@
+/*
+CAROUSEL
+*/
+
+@carousel-indicator-border: @light-grey;
+@carousel-indicator-background: @light-grey;
+
+.carousel {
+	padding-top: (@padding * 4);
+	padding-bottom: (@padding * 4);
+}
+
+.carousel-indicators {
+	bottom: 0;
+}
+
+.carousel-indicators li {
+	border: @border-size @border-type @carousel-indicator-border;
+	background: @carousel-indicator-background;
+}
+
+.carousel-indicators .active {
+	background: @medium-grey;
+}
+
+.carousel-caption {
+	color: @light-text;
+	position: inherit;
+	text-shadow: none;
+	padding-bottom: 0;
+}
+
+.carousel-control {
+	text-shadow: none;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+	background-image: none;
+}
+
+a.carousel-control.left,
+a.carousel-control.right  {
+	color: @light-grey;
+}
+
+a:hover.carousel-control.left,
+a:hover.carousel-control.right  {
+	color: @medium-grey;
+}
+
+
